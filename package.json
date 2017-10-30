@@ -10,6 +10,10 @@
     "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
     "prepublish": "npm run build"
   },
+  "repository": {
+     "type": "git",
+     "url": "git+https://github.com/filkate/project-lvl1-s160.git"
+  },
   "author": "Ekaterina Filippova",
   "license": "ISC",
   "description": "",
