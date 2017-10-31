@@ -1,6 +1,6 @@
 {
   "name": "brain-games19750126",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "main": "brain-games.js",
   "bin": {
     "brain-games": "dist/bin/brain-games.js"
@@ -11,10 +11,10 @@
     "prepublish": "npm run build"
   },
   "repository": {
-     "type": "git",
-     "url": "git+https://github.com/filkate/project-lvl1-s160.git"
+    "type": "git",
+    "url": "git+https://github.com/filkate/project-lvl1-s160.git"
   },
-  "author": "",
+  "author": "Ekaterina Filippova",
   "license": "ISC",
   "description": "",
   "devDependencies": {
@@ -22,5 +22,8 @@
     "babel-core": "*",
     "babel-preset-env": "*",
     "babel-preset-stage-0": "*"
+  },
+  "dependencies": {
+    "readline-sync": "^1.4.7"
   }
 }
