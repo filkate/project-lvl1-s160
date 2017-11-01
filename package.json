@@ -8,22 +8,27 @@
   "scripts": {
     "babel-node": "babel-node",
     "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
-    "prepublish": "npm run build"
+    "prepublish": "npm run build",
+    "eslint": "eslint"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/filkate/project-lvl1-s160.git"
   },
-  "author": "Ekaterina Filippova",
+  "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
     "babel-cli": "*",
     "babel-core": "*",
     "babel-preset-env": "*",
-    "babel-preset-stage-0": "*"
+    "babel-preset-stage-0": "*",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0"
   },
   "dependencies": {
+    "babel-eslint": "^8.0.1",
+    "eslint": "^4.10.0",
     "readline-sync": "^1.4.7"
   }
 }
