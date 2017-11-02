@@ -1,9 +1,10 @@
 {
-  "name": "brain-games19750126",
-  "version": "0.0.2",
-  "main": "brain-games.js",
+  "name": "another-brain-games",
+  "version": "0.0.5",
+  "main": "dist/bin/brain-games.js",
   "bin": {
-    "brain-games": "dist/bin/brain-games.js"
+    "brain-games": "dist/bin/brain-games.js",
+    "brain-even": "dist/bin/brain-even.js"
   },
   "scripts": {
     "babel-node": "babel-node",
