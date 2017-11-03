@@ -1,5 +1,5 @@
 import { cons, car, cdr } from './pairs';
 
-export const game = (rule, step) => cons(rule, step);
-export const rule = pair => car(pair);
-export const step = pair => cdr(pair);
+export const game = (question, answer) => cons(question, answer);
+export const question = pair => car(pair);
+export const answer = pair => cdr(pair);
