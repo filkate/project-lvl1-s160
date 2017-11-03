@@ -1,7 +1,7 @@
 import readlineSync from 'readline-sync';
+import { game } from '../type';
 
 const GAME_RULE = 'Answer "yes" if number even otherwise answer "no"\n';
-const STEPS_COUNT = 3;
 const makeQuestion = () => Math.round(Math.random() * 100);
 const isRight = num => ((num % 2 === 0) ? 'yes' : 'no');
 
@@ -18,19 +18,8 @@ function gameIteration() {
   return false;
 }
 
-function game(name) {
-  console.log(GAME_RULE);
-  let i;
-  for (i = 0; i < STEPS_COUNT; i += 1) {
-    if (!gameIteration()) {
-      break;
-    }
-  }
-  if (i === STEPS_COUNT) {
-    console.log(`Congratulations, ${name}!`);
-  } else {
-    console.log(`Let's try again, ${name}!`);
-  }
-}
 
-export default game;
+const evenGame = game(GAME_RULE, gameIteration);
+
+
+export default evenGame;
