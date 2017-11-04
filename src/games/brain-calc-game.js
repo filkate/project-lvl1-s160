@@ -1,6 +1,6 @@
 import { game } from '../type';
 
-const rule = 'What is the result of the expression?\n';
+const rule = 'What is the result of the expression?';
 
 let result;
 let numOper = 0;

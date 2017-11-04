@@ -1,6 +1,6 @@
 import { game } from '../type';
 
-const rule = 'Find the greatest common divisor of given numbers.\n';
+const rule = 'Find the greatest common divisor of given numbers.';
 let num1;
 let num2;
 const makeQuestion = () => {
