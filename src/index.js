@@ -1,22 +1,14 @@
 import readlineSync from 'readline-sync';
 
-const print = message => console.log(message);
-export function greeting(message) {
-  print('Welcome to the Brain Games!\n');
+function play(rule, step) {
+  console.log('Welcome to the Brain Games!');
+  console.log(rule);
   const name = readlineSync.question('May I have your name? ');
-  print(`Hello, ${name}`);
-  if (message) {
-    print(message);
-  }
-  return name;
-}
-
-
-export function play(name, makeQuestion, makeAnswer) {
+  console.log(`Hello, ${name}`);
   let i;
   for (i = 0; i < 3; i += 1) {
-    const question = makeQuestion();
-    const answer = makeAnswer();
+    const { question, answer } = step();
+
     const userAnswer = readlineSync.question(`Question: ${question}\nYour answer? `);
     if (userAnswer === answer) {
       console.log('Correct!');
@@ -31,3 +23,4 @@ export function play(name, makeQuestion, makeAnswer) {
     console.log(`Let's try again, ${name}!`);
   }
 }
+export default play;

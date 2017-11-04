@@ -1,7 +1,6 @@
-const rule = 'Balance the given number.';
-let arrNum;
+import play from '..';
 
-const makeQuestion = () => Math.round(Math.random() * 1000);
+const rule = 'Balance the given number.';
 
 const prepareNum = num =>
   String(num).split('').map(item => Number(item)).sort();
@@ -18,22 +17,24 @@ const balance = (num) => {
     return num.join('');
   }
   const len = num.length;
-  const newNum = num;
-  const diff = num[len - 1] - num[0];
-  const bal = Math.floor(diff / 2);
-  newNum[len - 1] -= bal;
-  newNum[0] += bal;
+  const newNum = num.slice();
+  newNum[len - 1] -= 1;
+  newNum[0] += 1;
   return balance(newNum.sort());
 };
 
-const question = makeQuestion();
+const step = () => {
+  const question = Math.round(Math.random() * 1000);
 
-const makeAnswer = () => {
-  arrNum = prepareNum(question);
-  if (isBalanced(arrNum)) {
-    return arrNum.join('');
-  }
-  return balance(arrNum);
+  const makeAnswer = () => {
+    const arrNum = prepareNum(question);
+    if (isBalanced(arrNum)) {
+      return arrNum.join('');
+    }
+    return balance(arrNum);
+  };
+  const answer = makeAnswer();
+  return { question, answer };
 };
 
-export { rule, makeQuestion, makeAnswer };
+export default () => play(rule, step);

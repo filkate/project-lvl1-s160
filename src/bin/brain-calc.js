@@ -1,6 +1,4 @@
 #!/usr/bin/node
-import { makeQuestion, makeAnswer, rule } from '../games/brain-calc-game';
-import { greeting, play } from '..';
+import game from '../games/brain-calc-game';
 
-const name = greeting(rule);
-play(name, makeQuestion, makeAnswer);
+game();
