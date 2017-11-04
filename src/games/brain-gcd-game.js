@@ -1,6 +1,5 @@
-import { game } from '../type';
-
 const rule = 'Find the greatest common divisor of given numbers.';
+
 let num1;
 let num2;
 const makeQuestion = () => {
@@ -19,11 +18,7 @@ const gcd = (a, b) => {
   return gcd(b, a % b);
 };
 
+const makeAnswer = () => gcd(num1, num2).toString();
 
-const make = () => {
-  const question = makeQuestion();
-  const answer = gcd(num1, num2).toString();
-  return game(question, answer);
-};
 
-export { rule, make };
+export { rule, makeAnswer, makeQuestion };

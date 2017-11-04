@@ -1,6 +1,6 @@
 {
   "name": "another-brain-games",
-  "version": "0.0.16",
+  "version": "0.0.18",
   "main": "dist/bin/brain-games.js",
   "bin": {
     "brain-games": "dist/bin/brain-games.js",
@@ -33,7 +33,6 @@
   "dependencies": {
     "babel-eslint": "^8.0.1",
     "eslint": "^4.10.0",
-    "hexlet-pairs": "^1.0.5",
     "readline-sync": "^1.4.7"
   }
 }

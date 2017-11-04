@@ -1,5 +1,4 @@
 import readlineSync from 'readline-sync';
-import { question, answer } from './type';
 
 const print = message => console.log(message);
 export function greeting(message) {
@@ -13,15 +12,16 @@ export function greeting(message) {
 }
 
 
-export function play(name, func) {
+export function play(name, makeQuestion, makeAnswer) {
   let i;
   for (i = 0; i < 3; i += 1) {
-    const game = func();
-    const userAnswer = readlineSync.question(`Question: ${question(game)}\nYour answer? `);
-    if (userAnswer === answer(game)) {
+    const question = makeQuestion();
+    const answer = makeAnswer();
+    const userAnswer = readlineSync.question(`Question: ${question}\nYour answer? `);
+    if (userAnswer === answer) {
       console.log('Correct!');
     } else {
-      console.log(`${userAnswer} is wrong answer ;(. Correct answer was ${answer(game)}.`);
+      console.log(`${userAnswer} is wrong answer ;(. Correct answer was ${answer}.`);
       break;
     }
   }

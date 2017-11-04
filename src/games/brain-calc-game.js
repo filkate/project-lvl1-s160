@@ -1,5 +1,3 @@
-import { game } from '../type';
-
 const rule = 'What is the result of the expression?';
 
 let result;
@@ -15,10 +13,7 @@ const makeQuestion = () => {
     default: result = num1 + num2; numOper += 1; return `${num1} + ${num2}`;
   }
 };
-const make = () => {
-  const answer = num => num.toString().trim();
-  const question = makeQuestion();
-  return game(question, answer(result));
-};
+const makeAnswer = () => result.toString().trim();
 
-export { make, rule };
+
+export { rule, makeQuestion, makeAnswer };

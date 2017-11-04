@@ -1,6 +1,6 @@
 #!/usr/bin/node
-import { make, rule } from '../games/brain-gcd-game';
+import { makeQuestion, makeAnswer, rule } from '../games/brain-gcd-game';
 import { greeting, play } from '..';
 
 const name = greeting(rule);
-play(name, make);
+play(name, makeQuestion, makeAnswer);

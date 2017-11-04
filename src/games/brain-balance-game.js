@@ -1,9 +1,8 @@
-import { game } from '../type';
-
 const rule = 'Balance the given number.';
 let arrNum;
 
 const makeQuestion = () => Math.round(Math.random() * 1000);
+
 const prepareNum = num =>
   String(num).split('').map(item => Number(item)).sort();
 
@@ -27,16 +26,14 @@ const balance = (num) => {
   return balance(newNum.sort());
 };
 
-const make = () => {
-  let answer = '';
-  const question = makeQuestion();
+const question = makeQuestion();
+
+const makeAnswer = () => {
   arrNum = prepareNum(question);
   if (isBalanced(arrNum)) {
-    answer = arrNum.join('');
-  } else {
-    answer = balance(arrNum);
+    return arrNum.join('');
   }
-  return game(question, answer);
+  return balance(arrNum);
 };
 
-export { make, rule };
+export { rule, makeQuestion, makeAnswer };
