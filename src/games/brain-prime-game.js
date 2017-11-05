@@ -1,6 +1,7 @@
 import play from '..';
 
 const rule = 'Is this a prime number?';
+
 const isPrime = (num) => {
   const iter = (number, divisor) => {
     if (divisor === number) {
